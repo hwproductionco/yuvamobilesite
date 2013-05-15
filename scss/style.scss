@@ -1,0 +1,65 @@
+/*-----------------------------------------------------------*/
+/* Compass Imports
+/*-----------------------------------------------------------*/
+
+@import "compass/css3";
+@import "compass/utilities/general/";
+
+/*-----------------------------------------------------------*/
+/* Variables
+/*-----------------------------------------------------------*/
+
+$footer-normal-text-color: #c9c9c9;
+$footer-info-text-color: #7d7d7d;
+$footer-headline-color: #fff;
+$footer-light-background: #3a3d40;
+$footer-dark-background: #2f3235;
+
+$input-border-color: #47494b;
+
+$link-color-normal: #21b5e1;
+
+$body-headline-color: lighten(#2b2b2b, 20%);
+$body-separator-grey: #e5e5e5;
+$body-normaltext-color: #979699;
+
+/*-----------------------------------------------------------*/
+/* Mixins
+/*-----------------------------------------------------------*/
+
+@mixin serif-font {
+	font-family: 'Patua One', cursive;
+}
+
+@mixin sansserif-font {
+	font-family: 'PT Sans', sans-serif;
+}
+
+@mixin websymbols-font {
+	font-family: 'WebSymbolsRegular';
+}
+
+@mixin link-style {
+	a {
+		color: $link-color-normal;	
+	}
+}
+
+@mixin main-bg {
+	background: url('../images/bg.png');
+}
+
+/*-----------------------------------------------------------*/
+/* SCSS files Import
+/*-----------------------------------------------------------*/
+
+@import "reset.scss";
+@import "fonts.scss";
+@import "general.scss";
+@import "footer.scss";
+@import "header.scss";
+@import "blog.scss";
+@import "menu.scss";
+@import "contact.scss";
+@import "gallery.scss";
+@import "photoswipe.scss";

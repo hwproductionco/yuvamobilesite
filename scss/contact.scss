@@ -1,0 +1,95 @@
+/*-----------------------------------------------------------*/
+/* Contact Styles
+/*-----------------------------------------------------------*/
+
+#contact-map {
+	position: relative;
+	
+	#map-overlay {
+		position: absolute;
+		height: 200px;
+		width: 100%;
+		border-bottom: 1px solid lighten($body-normaltext-color, 30%);
+		
+		&.hover-effect {
+			display: none;
+		}
+	}
+	
+	#map-overlay-close {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		height: 40px;
+		width: 40px;
+		background-color: $footer-dark-background;
+		@include border-radius(4px);
+		line-height: 40px;
+		display: block;
+		text-align: center;
+		cursor: pointer;
+		opacity: 0;
+		@include transition;
+	}
+	
+	iframe {
+		@include transition;
+		height: 200px;
+		width: 100%;
+		
+		&.hover-effect {
+			height: 400px;
+		}
+	}
+}
+
+.contact-page {
+	border-top: none !important;
+}
+
+#contact-form, .input-form {
+	p {
+		margin: 20px 0;
+	}
+
+	input {
+		display: block;
+	}
+	
+	input[type="text"], textarea {
+		@include border-radius(4px);
+		width: 100%;
+		border: 1px solid lighten($body-normaltext-color, 30%);
+		padding: 8px 12px;
+		color: lighten($body-normaltext-color, 20%);
+		box-sizing: border-box;
+		margin: 0 0;
+	}
+	
+	textarea {
+		height: 200px;
+	}
+	
+	label {
+		display: block;
+	}
+}
+
+
+/* Form style */
+
+#contact-form span.required, .input-form span.required{ font-size: 14px; color: darken(#ff0000, 10%); } /* Select the colour of the * if the field is required. */
+
+#message { margin: 10px 0; padding: 0; }
+
+.error_message { display: block; height: 22px; line-height: 22px; background: #FBE3E4; padding: 3px 10px 3px 10px; color: #8a1f11;border: 1px dashed #FBC2C4; -webkit-border-radius:5px; }
+
+.loader { 
+	padding: 0 10px;
+	width: 32px !important;
+	height: 32px !important;
+	background: none !important;
+	@include box-shadow(none !important);
+}
+
+#contact-form #success_page h1 { background: url('../assets/success.gif') left no-repeat; padding-left:22px; }

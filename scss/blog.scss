@@ -1,0 +1,164 @@
+/*-----------------------------------------------------------*/
+/* Blog Styles
+/*-----------------------------------------------------------*/
+
+
+#blog-list {
+	
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	
+	.blog-post-wrapper {
+		margin: 20px;
+	}
+	
+	li {
+		display: block;
+	}
+	
+	h2 {
+		font-size: 18px;
+		margin: 10px 0 0;
+		line-height: 24px;
+	}
+}
+
+.blog-list-meta {
+	padding: 0;
+	margin: 10px 0 5px;
+	font-size: 11px;
+		
+	p {
+		margin: 0;
+	}
+	
+	span {
+		@include websymbols-font;
+		margin-left: 10px;
+		margin-right: 2px;
+		
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+.readmore {
+	margin-top: 20px;
+}
+
+
+// stripes
+
+.stripe {
+	position: relative;
+	height: 35px;
+	width: 100%;
+	z-index: 2;
+	background: darken(white, 7%);
+	@include box-shadow(0 0 7px rgba(0, 0, 0, 0.3) inset);
+}
+
+.stripe-top {
+	width: auto;
+	display: block;
+	position: relative;
+	height: 5px;
+	top: 0;
+	z-index: 3;
+	background: url('../images/stripe-top.png') repeat-x;
+	content: ' ';
+}
+
+.stripe-bottom {
+	width: auto;
+	display: block;
+	position: relative;
+	height: 5px;
+	z-index: 3;
+	bottom: -25px;
+	background: url('../images/stripe-bottom.png') repeat-x;
+	content: ' ';
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (-moz-min-device-pixel-ratio: 2),
+	only screen and (-o-min-device-pixel-ratio: 2/1),
+	only screen and (min-device-pixel-ratio: 2) {
+
+	.stripe-bottom {
+		background: url('../images/stripe-bottom@2x.png') repeat-x;
+		background-size: 320px 5px;
+	}
+	
+	.stripe-top {
+		background: url('../images/stripe-top@2x.png') repeat-x;
+		background-size: 320px 5px;
+	}
+
+}
+
+.postformat-link {
+	text-align: center;
+	cite {
+		text-align: center;
+	}
+}
+
+/*-----------------------------------------------------------*/
+/* Comments
+/*-----------------------------------------------------------*/
+
+#comments {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	
+	li {
+		display: block;
+		@include pie-clearfix;
+		margin: 25px 5px;
+		border-bottom: 1px dotted lighten($body-normaltext-color, 20%);
+		
+		&:last-child {
+			border: none;
+		}
+	}
+}
+
+.comment-meta {
+	float: left;
+	margin-right: 20px;
+	display: block;
+	@include pie-clearfix;
+	margin-bottom: 15px;
+
+	img {
+		width: 60px !important;
+		height: 60px !important;
+		padding: 2px !important;
+		margin: 0 auto;
+		display: block;
+	}
+	
+	h4 {
+		font-size: 12px;
+		text-align: center;
+		margin: 3px 0 0;
+		font-weight: bold;
+		@include sansserif-font;
+	}
+	
+	.comment-time {
+		font-size: 11px;
+		line-height: 13px;
+		margin: 0;
+		text-align: center;
+		display: block;
+	}
+}
+
+.comment-content {
+	margin-left: 20px;
+}

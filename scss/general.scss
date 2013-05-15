@@ -1,0 +1,221 @@
+/*-----------------------------------------------------------*/
+/* General
+/*-----------------------------------------------------------*/
+
+.websymbol {
+    font-family: 'WebSymbolsRegular';
+}
+
+body {
+	font-size: 13px;
+	line-height: 22px;
+	@include sansserif-font;
+	@include main-bg;
+	color: $body-normaltext-color;
+}
+
+
+#content {
+	border-top: 5px solid rgba(0, 0, 0, .1);
+	border-bottom: 5px solid rgba(0, 0, 0, .1);
+	@include box-shadow(0px 0px 10px rgba(0,0,0,.6));
+	position: relative;
+	z-index: 10;
+}
+
+a {
+	color: $link-color-normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.full-width {
+	width: 100%;
+}
+h1, h2, h3, h4 {
+	@include serif-font;
+	color: $body-headline-color;
+	font-weight: normal;
+}
+
+.hover-effect {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+}
+
+#content img {
+	width: 100%;
+	height: auto;
+	padding: 6px;
+	@include box-shadow(0 0 5px rgba(0, 0, 0, 0.1));
+	box-sizing: border-box;
+	background-color: #fff;
+}
+
+.button{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	@include border-radius(4px);
+	font-weight: bold;
+	border: 1px solid #bfbfbf;
+	text-transform: uppercase;
+	color: darken(#bfbfbf, 20%);
+	@include text-shadow(0 1px 0 white);
+	@include box-shadow(0 0px 1px rgba(0, 0,0,0.1),0 1px 0px white inset);
+	background-image: linear-gradient(bottom, #DCDCDC 0%, #EEEEEE 100%);
+	background-image: -o-linear-gradient(bottom, #DCDCDC 0%, #EEEEEE 100%);
+	background-image: -moz-linear-gradient(bottom, #DCDCDC 0%, #EEEEEE 100%);
+	background-image: -webkit-linear-gradient(bottom, #DCDCDC 0%, #EEEEEE 100%);
+	background-image: -ms-linear-gradient(bottom, #DCDCDC 0%, #EEEEEE 100%);
+	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #DCDCDC),
+		color-stop(1, #EEEEEE)
+	);
+	
+	@include sansserif-font;
+	padding: 7px 13px;
+	margin: 5px 0;
+	
+	&.hover-effect{
+		background-image: linear-gradient(bottom, #DCDCDC 100%, #EEEEEE 0%);
+		background-image: -o-linear-gradient(bottom, #DCDCDC 100%, #EEEEEE 0%);
+		background-image: -moz-linear-gradient(bottom, #DCDCDC 100%, #EEEEEE 0%);
+		background-image: -webkit-linear-gradient(bottom, #DCDCDC 100%, #EEEEEE 0%);
+		background-image: -ms-linear-gradient(bottom, #DCDCDC 100%, #EEEEEE 0%);
+		
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(1, #DCDCDC),
+			color-stop(0, #EEEEEE)
+		);
+		@include box-shadow(0 2px 4px rgba(0, 0,0,0.1) inset);
+	}
+}
+
+.align-right {
+	float: right;
+	@include pie-clearfix; 
+}
+
+.align-left {
+	float: left;
+	@include pie-clearfix; 
+}
+
+.block-text-right {
+	display: block;
+	text-align: right;
+}
+
+.pagination {
+	margin: 20px;
+	a, span {
+		@extend .button;
+	}
+}
+
+hr {
+	height: 1px;
+	border: none;
+	border-bottom: 1px dotted lighten($body-normaltext-color, 20%);
+	border-top: 1px dotted lighten($body-normaltext-color, 20%);
+	margin: 30px 0;
+}
+
+blockquote {
+	font-size: 18px;
+	line-height: 30px;
+	@include serif-font;
+	margin: 10px 15px;
+	color: $body-headline-color;
+}
+
+cite {
+	text-align: right;
+	display: block;
+	font-style: normal;
+	margin-right: 15px;
+}
+
+.video {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+}
+
+figure {
+	width: 100%;
+	height: auto;
+}
+
+.video-container {
+	width: 100%;
+	position: relative;
+	padding: 0;
+	padding-top: 56.27659574468085%;
+}
+
+.video-container iframe,  
+.video-container object,  
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.video-wrapper {
+	@extend img;
+}
+
+.gallery ul {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapped-content {
+	margin: 20px;
+}
+
+#contact-form input[type="submit"], #contact-form input[type="button"], #contact-form input[type="reset"] {
+	@extend .button;
+}
+
+.inline {
+	display: inline-block !important;
+}
+
+/*-----------------------------------------------------------*/
+/* Achives
+/*-----------------------------------------------------------*/
+
+.archive {
+	list-style: none;
+		margin: 0;
+		padding: 0;
+	
+	h4 {
+		font-size: 18px;
+		margin: 0;
+	}
+	
+	li ul {
+		margin: 10px 0;
+		margin-left: 30px;
+		padding: 0;
+	}
+	
+	.achive-title {
+		font-weight: bold;
+	}
+}

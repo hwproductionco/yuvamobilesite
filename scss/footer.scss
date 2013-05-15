@@ -1,0 +1,124 @@
+/*-----------------------------------------------------------*/
+/* Footer Styles
+/*-----------------------------------------------------------*/
+
+
+#footer {
+	background-color: $footer-light-background;
+	color: $footer-normal-text-color;
+	border-top: 5px solid $footer-light-background;
+}
+
+#footer-main {
+	padding: 0 20px;
+	
+	h4 {
+		@include serif-font;
+		font-weight: normal;
+		text-transform: uppercase;
+		color: $footer-headline-color;
+		font-size: 14px;
+		margin: 15px 0 5px;
+	}
+}
+
+.footer-widget {
+	margin: 35px 0 40px;
+}
+
+.footer-widget-last {
+	margin: 35px 0 30px;
+}
+
+.footer-widget-latestnews {
+	a {
+		color: $footer-normal-text-color;
+	}
+	
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	
+	li {
+		margin: 12px 0 15px;
+	}
+	
+	p {
+		margin: 5px 0 5px;
+	}
+	
+	.info {
+		color: $footer-info-text-color;
+		font-size: 10px;
+		line-height: 10px;
+	}
+}
+
+.footer-widget-newsletter {
+	background: $footer-dark-background;
+	margin: 15px 0 0;
+	overflow: hidden;
+	padding: 0;
+	color: $input-border-color;
+	position: relative;
+	@include border-radius(4px);
+
+	
+	input {
+		background: none;
+		@include box-shadow(none);
+		border: none;
+		padding: 12px 15px;
+		color: $input-border-color;
+		&:focus {
+			outline: none;
+			@include box-shadow(0 0 5px rgba(0,0,0,0.3) inset);
+		}
+	}
+}
+
+.newsletter-submit {
+	color: $input-border-color;
+	position: absolute;
+	right: 0;
+	top: 0;
+	@include websymbols-font;
+	@include text-shadow(none !important);
+}
+
+.footer-widget-twitter {
+	@extend .footer-widget-latestnews;
+	@include link-style;
+}
+
+.footer-widget-socialfeed {
+	margin: 10px 0 0;
+	padding: 0;
+	
+	img	{
+		padding: 0;
+		background: none;
+	}
+	
+	li {
+		display: inline-block;
+		margin: 5px 5px 5px 0px;
+	}
+}
+
+/*-----------------------------------------------------------*/
+/*  Bottom Footer
+/*-----------------------------------------------------------*/
+
+#footer-bottom {
+	background: $footer-dark-background;
+	padding: 10px 20px;
+	color: $footer-info-text-color;
+	@include sansserif-font;
+	font-size: 10px;
+	text-transform: uppercase;
+	
+	span {
+		color: #fff;
+	}
+}
